@@ -13,11 +13,12 @@
     return Math.floor(year / 10) * 10;
   }
 
-  function apply(decade) {
+   function apply(decade) {
     var shown = 0;
+    var wanted = decade === "all" ? "all" : Number(decade);
 
     rows.forEach(function (row) {
-      var match = decade === "all" || decadeOf(row) === decade;
+      var match = wanted === "all" || decadeOf(row) === wanted;
       row.hidden = !match;
       if (match) shown++;
     });
