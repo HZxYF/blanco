@@ -1,0 +1,166 @@
+/* Blanco — one stylesheet, no frameworks. */
+
+:root {
+  --paper: #fbfaf7;
+  --ink: #15171b;
+  --ink-soft: #4d525c;
+  --line: #e3ded2;
+  --gold-dark: #7a6024;
+  --measure: 42rem;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+/* Every region sits on the same centre line. */
+header, main, footer {
+  width: min(100% - 2.5rem, var(--measure));
+  margin-inline: auto;
+}
+
+header {
+  padding-block: 1.75rem 1rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--sans);
+}
+
+header p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+header strong {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.4rem 0;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover { color: var(--ink); }
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--gold-dark);
+}
+
+main { padding-block: 2.5rem 3rem; }
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 2.75rem 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-dark);
+  margin: 2rem 0 0.75rem;
+}
+
+p { margin: 0 0 1.1rem; }
+
+main a { color: var(--gold-dark); text-underline-offset: 2px; }
+
+.table-scroll { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  margin: 1rem 0 1.5rem;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  padding-bottom: 0.75rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  border-bottom: 2px solid var(--ink);
+}
+
+tbody th { font-weight: 600; white-space: nowrap; }
+tbody tr:nth-child(even) { background: rgba(0, 0, 0, 0.02); }
+
+footer {
+  padding-block: 1.5rem 3rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+footer p { margin: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--gold-dark);
+  outline-offset: 3px;
+}
+
+@media (max-width: 30rem) {
+  body { font-size: 1rem; }
+  header { padding-block: 1.25rem 0.75rem; }
+  nav ul { gap: 0.15rem 1.1rem; }
+  h2 { font-size: 1.25rem; }
+  table { font-size: 0.82rem; }
+  th, td { padding: 0.5rem; }
+}
