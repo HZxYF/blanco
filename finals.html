@@ -32,6 +32,18 @@
       The table below lists every final, with the opponent, the score and where it was played.
     </p>
 
+        <div class="filter" role="group" aria-labelledby="filter-label">
+      <p class="filter__label" id="filter-label">Show</p>
+      <button type="button" class="chip" data-decade="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-decade="1950" aria-pressed="false">1950s</button>
+      <button type="button" class="chip" data-decade="1960" aria-pressed="false">1960s</button>
+      <button type="button" class="chip" data-decade="1990" aria-pressed="false">1990s</button>
+      <button type="button" class="chip" data-decade="2000" aria-pressed="false">2000s</button>
+      <button type="button" class="chip" data-decade="2010" aria-pressed="false">2010s</button>
+      <button type="button" class="chip" data-decade="2020" aria-pressed="false">2020s</button>
+    </div>
+    <p class="count" id="final-count" role="status">15 finals shown</p>
+
      <div class="table-scroll">
     <table>
       <caption>European Cup and Champions League finals, 1956–2024</caption>
@@ -72,5 +84,6 @@
   <footer>
     <p>Blanco — an independent student project. Not affiliated with Real Madrid CF.</p>
   </footer>
+    <script src="filter.js" defer></script>
 </body>
 </html>

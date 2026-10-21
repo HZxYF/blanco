@@ -197,3 +197,46 @@ footer p { margin: 0; }
   color: var(--ink-soft);
   margin-bottom: 0.75rem;
 }
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.75rem 0 0.5rem;
+  font-family: var(--sans);
+}
+
+.filter__label {
+  margin: 0 0.25rem 0 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.chip {
+  font: inherit;
+  font-size: 0.85rem;
+  min-height: 2.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.chip:hover { border-color: var(--ink-soft); }
+
+.chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.count {
+  margin: 0 0 1rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
