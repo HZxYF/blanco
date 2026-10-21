@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Blanco</title>
+  <meta name="description" content="Why this site exists, where the facts came from, and how it is built.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p><strong>Blanco</strong> — a Real Madrid history</p>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="finals.html">Finals</a></li>
+        <li><a href="legends.html">Players</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About this site</h1>
+
+    <p>
+      I have supported Real Madrid since I was old enough to stay up for a match, and the
+      thing that kept me interested was not the trophies but the shape of the story: a club
+      that keeps rebuilding itself and keeps ending up in the same place. This site is that
+      story written down properly, in six eras, with the numbers checked.
+    </p>
+
+    <h2>Sources</h2>
+    <p>
+      Every date, score and venue was checked against the Wikipedia articles on Real Madrid
+      and on the list of European Cup and Champions League finals. Where those sources
+      disagreed with what I thought I knew, the site follows them, not me. The 2024 final is
+      the cut-off: nothing after it is described.
+    </p>
+
+    <h2>How it is built</h2>
+    <p>
+      Five HTML pages, one CSS file, one JavaScript file of about forty lines. No framework,
+      no build step, no database, no server-side code. Every page is a complete document
+      that works on its own, which is why the site survives being opened straight from a
+      folder as well as from the web.
+    </p>
+    <p>
+      The filter on the finals page is an enhancement, not a requirement: with JavaScript
+      turned off, all fifteen finals are still visible and the table still reads. That was a
+      deliberate choice — a page that breaks without script is a page that fails on a bad
+      connection.
+    </p>
+
+    <h2>Decisions worth explaining</h2>
+    <ul>
+      <li>
+        <strong>Serif text, one column, about seventy characters wide.</strong> This is a
+        reading site. Long lines are hard to track, so the measure is capped and the layout
+        does not expand on a large screen.
+      </li>
+      <li>
+        <strong>Buttons, not a dropdown, for the decade filter.</strong> All the options are
+        visible at once, and each is a real button that works with a keyboard.
+      </li>
+      <li>
+        <strong>Wide tables scroll sideways instead of shrinking.</strong> On a phone the
+        finals table keeps its text size and slides; the alternative was unreadable columns.
+      </li>
+      <li>
+        <strong>No photographs.</strong> A history site does not need them, and I did not
+        want to fill it with pictures I have no right to use.
+      </li>
+    </ul>
+
+    <h2>Corrections</h2>
+    <p>
+      If a fact here is wrong, I would rather know. Open an issue on the repository and say
+      which line it is; the source code is the same thing you are reading.
+    </p>
+  </main>
+
+  <footer>
+    <p>Blanco — an independent student project. Not affiliated with Real Madrid CF.</p>
+  </footer>
+</body>
+</html>
