@@ -164,3 +164,36 @@ footer p { margin: 0; }
   table { font-size: 0.82rem; }
   th, td { padding: 0.5rem; }
 }
+.cards {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 40rem) {
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.card h2 {
+  margin: 0 0 0.25rem;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 1.15rem;
+}
+
+.card p { margin-bottom: 0.75rem; }
+.card p:last-child { margin-bottom: 0; }
+
+.meta {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.75rem;
+}
